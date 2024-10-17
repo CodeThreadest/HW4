@@ -423,7 +423,7 @@ class myHashMap<K,V> {
          * replace (see method's prologue above).
          */
         int index = getBucketIndex(key);
-        HashNode<K,V> head = bucket[key];
+        HashNode<K,V> head = bucket.get(index);
         if(head == null){
             return null;
         }
