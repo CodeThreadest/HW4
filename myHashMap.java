@@ -441,7 +441,7 @@ class myHashMap<K,V> {
             }
             current = current.next;
         }
-        return val;
+        return null;
     }
 
 
@@ -470,8 +470,8 @@ class myHashMap<K,V> {
          */
         if(containsKey(key)){
             V currentValue = get(key);
-            if(containsValue(currentValue)){
-                replace(key, oldVal);
+            if(currentValue.equals(oldVal)){
+                replace(key, newVal);
                 return true;
             }
         }
