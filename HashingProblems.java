@@ -42,6 +42,8 @@ class HashingProblems {
          */
         double sum = 0.0;
         int count = 0;
+        /*Loop through array and check if HashMap has the same key.
+        * if it is in map get the value and add the value to sum*/
         for(int key : array) {
             if (map.containsKey(key)) {
                 sum += map.get(key);
@@ -68,6 +70,8 @@ class HashingProblems {
        *
        * Hint: Consider iterating over the HashMap using the keySet method.
        */
+      /*loop through map.keySet using key and check if the modulo of key and 2 does not equal 0
+      * if so add the key's value to result*/
       for(int key: map.keySet()){
           if(key % 2 !=0){
               result.add(map.get(key));
@@ -119,6 +123,8 @@ class HashingProblems {
       /*
        * ADD YOUR CODE HERE
        */
+      /*loop through numbers array using num and check if our initialized set Hashset has the num+k
+      * or num-k add each num to set after and return count*/
       HashSet<Integer> set = new HashSet<>();
       int count = 0;
       for(int num : numbers){
